@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue selectbox</title>
+    <link  rel="stylesheet" href="css/vue-selectbox.css"/>
+    <script src="https://unpkg.com/vue@2.2.6/dist/vue.js"></script>
+    <script src="js/selectbox.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div id="app">
+    Value: {{selectedVal}}<br/>
+    <v-selectbox class="v-select-box" v-bind:options="list" v-model="selectedVal"
+                 data-default="Select" data-key-name="label" data-val-name="id"></v-selectbox>
+</div>
+</body>
+</html>
