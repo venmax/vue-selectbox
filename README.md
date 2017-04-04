@@ -1,6 +1,6 @@
 # vue-selectbox
 
-## demo
+## Demo
 
 [Here is a demo](https://cdn.rawgit.com/venmax/vue-selectbox/010954a2/selectbox.html)
 
