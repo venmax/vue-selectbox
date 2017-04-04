@@ -1,5 +1,9 @@
 # vue-selectbox
 
+## demo
+
+[Here is a demo](https://cdn.rawgit.com/venmax/vue-selectbox/010954a2/selectbox.html)
+
 ## Basic Usage
 
 ### Common use 
