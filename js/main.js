@@ -10,7 +10,8 @@ window.onload = function () {
                 {id:2,label:'option 2'},
                 {id:3,label:'option 3'},
                 {id:4,label:'option 4'}],
-            selectedVal: "1"
+            selectedVal: "1",
+            isDisabled: false
         }
     })
 };

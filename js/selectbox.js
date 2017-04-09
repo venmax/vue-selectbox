@@ -6,11 +6,11 @@
  */
 var vSelectBox = Vue.extend({
     template: '<div v-click-outside="clickedOutside">' +
-    '<div @click="toggleDropdown" class="dropdown-toggle" v-bind:class="{open:open}">{{selected}}</div>' +
+    '<div @click="toggleDropdown" class="dropdown-toggle" v-bind:class="{open:open, disabled:disabled}">{{selected}}</div>' +
     '<ul  v-if="open">' +
     '<li v-for="item in parsedDataList" @click="setVal(item)" v-bind:class="{selected:selected == item.name}">{{item.name}}</li>' +
     '</ul></div>',
-    props: ['options', 'dataDefault','dataKeyName','dataValName'],
+    props: ['options', 'dataDefault','dataKeyName','dataValName', 'disabled'],
     data: function () {
         return {
             selected: '',       // selected name
@@ -36,15 +36,19 @@ var vSelectBox = Vue.extend({
     },
     methods: {
         setVal: function (val) {
-            this.updateValue(val);
-            this.toggleDropdown();
+            if(!this.disabled) {
+                this.updateValue(val);
+                this.toggleDropdown();
+            }
         },
         updateValue: function (data) {
             this.selected = data.name;
             this.$emit('input', data.id);
         },
         toggleDropdown: function () {
-            this.open = !this.open;
+            if(!this.disabled) {
+                this.open = !this.open;
+            }
         },
         parseData: function(dataList) {
             if(dataList.length == 0){

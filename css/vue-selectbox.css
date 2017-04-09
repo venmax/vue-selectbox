@@ -2,13 +2,19 @@
     position: relative;
     display: inline-block;
     width: 130px;
-    border: 1px solid #cfcfcf;
-    border-radius: 4px;
     cursor: pointer;
 }
 
 .v-select-box .dropdown-toggle {
     padding: 3px 4px;
+    border: 1px solid #cfcfcf;
+    border-radius: 4px;
+}
+
+.v-select-box .dropdown-toggle.disabled{
+    background-color: #eee;
+    color: #bbb;
+    border-radius: 4px;
 }
 
 .v-select-box .dropdown-toggle:after {
