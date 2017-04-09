@@ -31,7 +31,7 @@ The most common use case is pass options to component vue-select, and bind a mod
 
 ### Setting Options
 ```html
-<v-selectbox class="v-select-box" v-bind:options="options" v-model="selectedVal"
+<v-selectbox class="v-select-box" v-bind:disabled="isDisabled" v-bind:options="options" v-model="selectedVal"
                  data-default="Select" data-key-name="label" data-val-name="id"></v-selectbox>
 ```
 
@@ -44,3 +44,4 @@ Accepted options:
 | data-default | default select label | default: Select |
 | data-key-name | option key | default: name | 
 | data-val-name | option value | default: id |
+| v-bind:disabled | true/false | default: false |
